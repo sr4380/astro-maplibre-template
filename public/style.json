@@ -102,7 +102,7 @@
     {
       "id": "background",
       "paint": {
-        "background-color": "rgba(16, 15, 15, 1)"
+        "background-color": "rgba(251, 251, 251, 1)"
       },
       "type": "background",
       "layout": {
@@ -310,7 +310,9 @@
         ["==", "class", "pier"]
       ],
       "id": "road_area_pier",
-      "layout": {"visibility": "none"},
+      "layout": {
+        "visibility": "visible"
+      },
       "metadata": {},
       "paint": {
         "fill-antialias": true,
@@ -722,7 +724,7 @@
         "text-max-width": 5,
         "text-rotation-alignment": "map",
         "text-size": 14,
-        "visibility": "none"
+        "visibility": "visible"
       },
       "minzoom": 7,
       "paint": {
@@ -751,7 +753,7 @@
         "text-size": {
           "stops": [[14, 12], [18, 19]]
         },
-        "visibility": "none"
+        "visibility": "visible"
       },
       "minzoom": 14,
       "paint": {
@@ -785,7 +787,7 @@
         "text-rotation-alignment": "map",
         "text-size": 14,
         "text-transform": "none",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "minzoom": 4,
       "paint": {
@@ -814,7 +816,7 @@
         "text-rotation-alignment": "map",
         "text-size": 14,
         "text-transform": "uppercase",
-        "visibility": "none"
+        "visibility": "visible"
       },
       "minzoom": 2,
       "paint": {
