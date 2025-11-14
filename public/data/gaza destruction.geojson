@@ -1,0 +1,28 @@
+{
+"type": "FeatureCollection",
+"name": "gaza destruction",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": "Islamic University ", "latitude": 31.50786964, "longitude": 34.43760492 }, "geometry": { "type": "Point", "coordinates": [ 34.43760492, 31.50786964 ] } },
+{ "type": "Feature", "properties": { "id": "Samir Mansour ", "latitude": 31.51630556, "longitude": 34.45302778 }, "geometry": { "type": "Point", "coordinates": [ 34.45302778, 31.51630556 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Qarara Museum", "latitude": 31.37054018, "longitude": 34.32653203 }, "geometry": { "type": "Point", "coordinates": [ 34.32653203, 31.37054018 ] } },
+{ "type": "Feature", "properties": { "id": "University College of Applied Sciences ", "latitude": 31.497922, "longitude": 34.436947 }, "geometry": { "type": "Point", "coordinates": [ 34.436947, 31.497922 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Aqsa University ", "latitude": 31.48349167, "longitude": 34.44065833 }, "geometry": { "type": "Point", "coordinates": [ 34.44065833, 31.48349167 ] } },
+{ "type": "Feature", "properties": { "id": "Gaza University ", "latitude": 31.5035, "longitude": 34.4723 }, "geometry": { "type": "Point", "coordinates": [ 34.4723, 31.5035 ] } },
+{ "type": "Feature", "properties": { "id": "destroyed Gaza City�s Central Archives", "latitude": 31.506944, "longitude": 34.46 }, "geometry": { "type": "Point", "coordinates": [ 34.46, 31.506944 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Fakhoura school", "latitude": 31.5377, "longitude": 34.498 }, "geometry": { "type": "Point", "coordinates": [ 34.498, 31.5377 ] } },
+{ "type": "Feature", "properties": { "id": "Beit Hanoun elementary co-educational school", "latitude": 31.5425389, "longitude": 34.5336611 }, "geometry": { "type": "Point", "coordinates": [ 34.5336611, 31.5425389 ] } },
+{ "type": "Feature", "properties": { "id": "Omari Mosque ", "latitude": 31.5043, "longitude": 34.4644 }, "geometry": { "type": "Point", "coordinates": [ 34.4644, 31.5043 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Aqsa University", "latitude": 31.4834914, "longitude": 34.44065824 }, "geometry": { "type": "Point", "coordinates": [ 34.44065824, 31.4834914 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Azhar University ", "latitude": 31.51528, "longitude": 34.43639 }, "geometry": { "type": "Point", "coordinates": [ 34.43639, 31.51528 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Israa University�s Al-Zahara campus ", "latitude": 31.523442, "longitude": 34.452215 }, "geometry": { "type": "Point", "coordinates": [ 34.452215, 31.523442 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Sardi school in Nuseirat camp", "latitude": 31.4475, "longitude": 34.392778 }, "geometry": { "type": "Point", "coordinates": [ 34.392778, 31.4475 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Awda school in Abbasan", "latitude": 31.333889, "longitude": 34.338333 }, "geometry": { "type": "Point", "coordinates": [ 34.338333, 31.333889 ] } },
+{ "type": "Feature", "properties": { "id": "Abu Hussein school", "latitude": 31.528056, "longitude": 34.483056 }, "geometry": { "type": "Point", "coordinates": [ 34.483056, 31.528056 ] } },
+{ "type": "Feature", "properties": { "id": "Al-Shuhada school", "latitude": 31.51269167, "longitude": 34.47899722 }, "geometry": { "type": "Point", "coordinates": [ 34.47899722, 31.51269167 ] } },
+{ "type": "Feature", "properties": { "id": "Dar al-Arqam school ", "latitude": 31.54, "longitude": 34.46997 }, "geometry": { "type": "Point", "coordinates": [ 34.46997, 31.54 ] } },
+{ "type": "Feature", "properties": { "id": "the Fahmi al-Jarjawi school ", "latitude": 31.51305556, "longitude": 34.45972222 }, "geometry": { "type": "Point", "coordinates": [ 34.45972222, 31.51305556 ] } },
+{ "type": "Feature", "properties": { "id": "an UNRWA school in Bani Suhaila", "latitude": 31.34486667, "longitude": 34.32589167 }, "geometry": { "type": "Point", "coordinates": [ 34.32589167, 31.34486667 ] } },
+{ "type": "Feature", "properties": { "id": "Cairo Elementary School for Girls ", "latitude": 31.5194, "longitude": 34.4512 }, "geometry": { "type": "Point", "coordinates": [ 34.4512, 31.5194 ] } }
+]
+}
