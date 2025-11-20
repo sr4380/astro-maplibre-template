@@ -38,7 +38,7 @@
   pitch: 0
   bearing: 20
   description: The 1968 protests confronted the University's involvement in Military research and segregationst gym construction plans.
-  media: ./img/1968_morningsidepark.jpg
+  media: ./img/1968-morningside-park.png
   layers:
     - id: '1968outdoor'
       url: 'https://raw.githubusercontent.com/sr4380/Columbia-as-Free-Speech-Test-Ground/main/public/data/1968%20outdoor.geojson'
@@ -113,7 +113,7 @@
   pitch: 0
   bearing: 20
   description: Recent Encampments and disciplinary actions highlight the ongoing struggle for Free Speech and Academic Freedom on Campus.
-  media: ./img/2024_hindhall.jpg
+  media: ./img/2024-hind-hall.avif
   layers:
   - id: '2024building'
     url: 'https://raw.githubusercontent.com/sr4380/Columbia-as-Free-Speech-Test-Ground/main/public/data/2024%20building%20occupy%20latest%204326.geojson'
