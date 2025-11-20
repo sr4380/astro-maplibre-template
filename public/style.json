@@ -58,27 +58,17 @@
       "type": "line",
       "source": "openmaptiles",
       "source-layer": "transportation",
+      "filter": ["in", "class", "motorway", "primary", "secondary"],
       "paint": {
-        "line-color": "#000000",
+        "line-color": "#555555",
         "line-width": [
           "interpolate",
           ["linear"],
           ["zoom"],
-          10, 0.3,
-          14, 1.5,
+          10, 0.5,
+          14, 2,
           18, 4
         ]
-      }
-    },
-
-    {
-      "id": "boundaries",
-      "type": "line",
-      "source": "openmaptiles",
-      "source-layer": "boundary",
-      "paint": {
-        "line-color": "#000000",
-        "line-width": 1
       }
     },
 
