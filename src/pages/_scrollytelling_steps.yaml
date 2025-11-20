@@ -38,9 +38,8 @@
   pitch: 0
   bearing: 20
   description: The 1968 protests confronted the University's involvement in Military research and segregationst gym construction plans.
-  media: ./img/1968-morningside-park.jpg
-         ./1968-avery-hall.jpg
-         ./1968-radio-broadcast.jpg
+  media: ./img/1968.jpg
+  
   layers:
     - id: '1968outdoor'
       url: 'https://raw.githubusercontent.com/sr4380/Columbia-as-Free-Speech-Test-Ground/main/public/data/1968%20outdoor.geojson'
