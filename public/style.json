@@ -61,7 +61,7 @@
       "source-layer": "transportation",
       "filter": ["in", "class", "motorway", "primary", "secondary"],
       "paint": {
-        "line-color": "#555555",
+        "line-color": "#ffffff",
         "line-width": [
           "interpolate",
           ["linear"],
