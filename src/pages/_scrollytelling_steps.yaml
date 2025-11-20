@@ -12,7 +12,8 @@
   pitch: 0
   bearing: 20
   description: In 1917, during World War I, speaking against the war was considered treason. Columbia students were arrested for distributing antiwar leaflets, and faculty members faced dismissal for expressing political dissent.
-
+  media: ./img/1917.jpg
+  
 - title: 1936 Anti-Nazi Protests
   center: [-73.96778, 40.78376]
   zoom: 14
