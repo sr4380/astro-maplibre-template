@@ -1,18 +1,25 @@
 {
   "version": 8,
   "name": "custom-toner",
+  "metadata": {"maputnik:renderer": "mlgljs"},
   "sources": {
-    "osm": {
+    "protomaps": {
+      "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
       "type": "vector",
-      "url": "https://tiles.protomaps.com/tiles.json?key=46fe7633b5463e2b"
-    }
+      "tiles": [
+        "https://api.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt?key=46fe7633b5463e2b"
+      ],
+      "maxzoom": 15
+      }
   },
   "sprite": "",
-  "glyphs": "https://tiles.protomaps.com/fonts/{fontstack}/{range}.pbf?key=46fe7633b5463e2b",
+  "glyphs": "https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
       "type": "background",
+      "minzoom": 2,
+      "maxzoom": 22,
       "paint": {
         "background-color": "#ffffff"
       }
@@ -20,7 +27,7 @@
     {
       "id": "water",
       "type": "fill",
-      "source": "osm",
+      "source": "protomaps",
       "source-layer": "water",
       "paint": {
         "fill-color": "#000000"
@@ -29,7 +36,7 @@
     {
       "id": "landuse",
       "type": "fill",
-      "source": "osm",
+      "source": "protomaps",
       "source-layer": "landuse",
       "paint": {
         "fill-color": "#ffffff"
@@ -38,7 +45,7 @@
     {
       "id": "buildings",
       "type": "fill",
-      "source": "osm",
+      "source": "protomaps",
       "source-layer": "building",
       "paint": {
         "fill-color": "#000000"
@@ -47,7 +54,7 @@
     {
       "id": "roads",
       "type": "line",
-      "source": "osm",
+      "source": "protomaps",
       "source-layer": "transportation",
       "paint": {
         "line-color": "#000000",
