@@ -1,6 +1,6 @@
 - title:  Free Speech as Contested Ground at Columbia
   style: '/style.json'
-  center: [-73.9670, 40.8075]
+  center: [-73.9750, 40.8200]
   zoom: 11
   pitch: 0
   bearing: 0
@@ -28,7 +28,7 @@
       fill-extrusion-opacity: 1
 
 - title: 1936 Anti-Nazi Protests
-  center: [-73.9670, 40.8000]
+  center: [-73.9750, 40.8200]
   zoom: 12
   pitch: 0
   bearing: 20
