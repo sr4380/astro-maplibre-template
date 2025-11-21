@@ -86,7 +86,7 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
         rel="stylesheet"
         href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"
       />
-      <script>
+      <script is:inline type="module">
         import maplibregl from "maplibre-gl";
         import { loadMapLayers } from "@lib/utils";
 
@@ -114,8 +114,12 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
             });
 
             // Legend update function
-            function updateLegend(legendData) {
+            function updateLegend(
+              legendData: { color: string; label: string }[] | undefined
+            ) {
               const legend = document.getElementById("legend");
+              if (!legend) return;
+
               if (!legendData || legendData.length === 0) {
                 legend.innerHTML = "";
                 return;
@@ -125,7 +129,7 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
                 <h4>Legend</h4>
                 ${legendData
                   .map(
-                    (item) => `
+                    (item: { color: string; label: string }) => `
                     <div class="item">
                       <span class="color" style="background:${item.color}"></span>
                       ${item.label}
@@ -145,17 +149,27 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
                     if (entry.isIntersecting) {
                       entry.target.classList.add("active");
 
-                      // Map position
                       const centerAttr = entry.target.getAttribute("data-center");
                       const center = centerAttr ? JSON.parse(centerAttr) : undefined;
-                      const zoom = entry.target.getAttribute("data-zoom");
-                      const pitch = entry.target.getAttribute("data-pitch");
-                      const bearing = entry.target.getAttribute("data-bearing");
+                      const zoomAttr = entry.target.getAttribute("data-zoom");
+                      const zoom = zoomAttr ? parseFloat(zoomAttr) : undefined;
+                      const pitchAttr = entry.target.getAttribute("data-pitch");
+                      const pitch = pitchAttr ? parseFloat(pitchAttr) : undefined;
+                      const bearingAttr = entry.target.getAttribute("data-bearing");
+                      const bearing = bearingAttr ? parseFloat(bearingAttr) : undefined;
 
                       // Layers
                       const layersAttr = entry.target.getAttribute("data-layers");
                       const layers = layersAttr ? JSON.parse(layersAttr) : undefined;
-                      if (layers) loadMapLayers(map, layers, true);
+                      if (layers) {
+                        layers.forEach(
+                          (layer: any) => {
+                            if (map.getLayer(layer.id)) map.removeLayer(layer.id);
+                            if (map.getSource(layer.id)) map.removeSource(layer.id);
+                          }
+                        );
+                        loadMapLayers(map, layers, true);
+                      }
 
                       // Legend
                       const legendAttr = entry.target.getAttribute("data-legend");
@@ -171,9 +185,9 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
 
                       map[mapAnimation]({
                         center,
-                        zoom: zoom ? parseFloat(zoom) : undefined,
-                        pitch: pitch ? parseFloat(pitch) : undefined,
-                        bearing: bearing ? parseFloat(bearing) : undefined,
+                        zoom,
+                        pitch,
+                        bearing,
                         essential: true,
                       });
 
@@ -195,7 +209,7 @@ const layersJson = layers ? JSON.stringify(layers) : undefined;
                         const layersAttr = entry.target.getAttribute("data-layers");
                         const layers = layersAttr ? JSON.parse(layersAttr) : undefined;
                         if (layers) {
-                          layers.forEach((layer) => {
+                          layers.forEach((layer: any) => {
                             if (map.getLayer(layer.id)) map.removeLayer(layer.id);
                             if (map.getSource(layer.id)) map.removeSource(layer.id);
                           });
