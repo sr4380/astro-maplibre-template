@@ -1,121 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Scrollytelling Map — Toner</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Scrollytelling Map — Toner</title>
 
-  <!-- MapLibre CSS -->
-  <link
-    href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css"
-    rel="stylesheet"
-  />
+<link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
 
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-    }
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    #map {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-    }
+#map {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
 
-    .map-attrib {
-      position: absolute;
-      left: 8px;
-      bottom: 8px;
-      background: rgba(255,255,255,0.85);
-      padding: 6px 8px;
-      font-size: 12px;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-      z-index: 10;
-    }
+/* Attribution box */
+.map-attrib {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  background: rgba(255,255,255,0.85);
+  padding: 6px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  z-index: 10;
+}
 
-    /* Legend CSS */
-    #map-legend {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255,255,255,0.95);
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-      z-index: 20; /* higher than map */
-    }
+/* Legend overlay */
+#map-legend {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,0.95);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  z-index: 1000; /* Make sure it’s above the map */
+}
 
-    #map-legend div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 4px;
-    }
+#map-legend div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
 
-    #map-legend span {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-      margin-right: 6px;
-      border-radius: 3px;
-    }
-  </style>
+#map-legend span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 3px;
+}
+</style>
 </head>
 <body>
 
-  <div id="map"></div>
+<div id="map"></div>
 
-  <!-- Legend placed after map so it overlays properly -->
-  <div id="map-legend">
-    <div><span style="background:red;"></span> Indoor Protest</div>
-    <div><span style="background:green;"></span> Outdoor Protest</div>
-    <div><span style="background:yellow;"></span> Visibility</div>
-  </div>
+<!-- Legend must be outside map div and after it -->
+<div id="map-legend">
+  <div><span style="background:rgba(220,130,130,1)"></span> Indoor Protest</div>
+  <div><span style="background:rgba(196,226,208,1)"></span> Outdoor Protest</div>
+  <div><span style="background:rgba(222,209,154,1)"></span> Visibility</div>
+</div>
 
-  <div class="map-attrib">Basemap: Toner (MapTiler) — style: <code>/style.json</code></div>
+<div class="map-attrib">Basemap: Toner (MapTiler) — style: <code>/style.json</code></div>
 
-  <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
-  <script>
-    const map = new maplibregl.Map({
-      container: "map",
-      style: "/style.json",
-      center: [-73.9772, 40.7831],
-      zoom: 11,
-      interactive: false,
+<script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+<script>
+const map = new maplibregl.Map({
+  container: "map",
+  style: "/style.json",
+  center: [-73.9772, 40.7831],
+  zoom: 11,
+  interactive: false,
+});
+
+// Disable interactions if needed
+if (!map.options.interactive) {
+  map.dragPan.disable();
+  map.scrollZoom.disable();
+  map.doubleClickZoom.disable();
+  map.touchZoomRotate.disable();
+  map.keyboard.disable();
+  map.boxZoom.disable();
+  map.dragRotate && map.dragRotate.disable && map.dragRotate.disable();
+}
+
+map.on("load", () => {
+  console.log("Map loaded");
+
+  const columbiaView = { center: [-73.9615, 40.8075], zoom: 14 };
+  setTimeout(() => {
+    map.flyTo({
+      center: columbiaView.center,
+      zoom: columbiaView.zoom,
+      speed: 0.8,
+      curve: 1
     });
-
-    if (!map.options.interactive) {
-      map.dragPan.disable();
-      map.scrollZoom.disable();
-      map.doubleClickZoom.disable();
-      map.touchZoomRotate.disable();
-      map.keyboard.disable();
-      map.boxZoom.disable();
-      map.dragRotate && map.dragRotate.disable && map.dragRotate.disable();
-    }
-
-    map.on("load", () => {
-      console.log("Map loaded");
-
-      const columbiaView = { center: [-73.9615, 40.8075], zoom: 14 };
-      setTimeout(() => {
-        map.flyTo({
-          center: columbiaView.center,
-          zoom: columbiaView.zoom,
-          speed: 0.8,
-          curve: 1
-        });
-      }, 3000);
-    });
-  </script>
+  }, 3000);
+});
+</script>
 </body>
 </html>
