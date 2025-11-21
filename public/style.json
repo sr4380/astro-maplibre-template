@@ -59,9 +59,46 @@
         "fill-opacity": {
           "stops": [[10, 0.75], [14, 1]]
         },
-        "fill-outline-color": "rgba(94,94,94,0)"
+        "fill-outline-color": "rgba(94,94,94,0)",
+        "fill-pattern": "dash-t"
       },
       "layout": {"visibility": "visible"}
+    },
+
+    {
+  "id": "road_secondary",
+  "type": "line",
+  "source": "openmaptiles",
+  "source-layer": "transportation",
+  "filter": [
+    "all",
+    ["==", "$type", "LineString"],
+    ["!in", "class", "pier", "rail", "path", "primary"],
+    ["in", "class", "secondary", "tertiary", "minor", "service"]
+  ],
+  "layout": {
+    "line-cap": "round",
+    "line-join": "round",
+    "visibility": "visible"
+      },
+  "minzoom": 10,
+  "paint": {
+    "line-color": {
+      "stops": [
+        [10, "rgba(0, 0, 0, 0.3)"],
+        [12, "rgba(0, 0, 0, 0.5)"],
+        [15, "rgba(0, 0, 0, 1)"]
+      ]
+    },
+    "line-width": {
+      "stops": [
+        [13, 0.05],
+        [15, 0.05],
+        [17, 0]
+      ],
+      "base": 1
+    }
+      }
     },
 
     {
