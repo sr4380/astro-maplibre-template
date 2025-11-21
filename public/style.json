@@ -43,8 +43,18 @@
       "source-layer": "boundary",
       "paint": {
         "line-color": "#333333",
-        "line-width": 0.8
+        "line-width": 1
       }
+    },
+    {
+      "id": "buildings",
+      "type": "line",
+      "source": "openmaptiles", 
+      "source-layer": "building",
+      "paint": {
+        "line-color": "#555555",
+        "line-width": 1.2
+      }  
     }
   ]
 }
