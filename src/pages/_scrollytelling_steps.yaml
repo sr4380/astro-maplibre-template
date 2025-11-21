@@ -102,7 +102,7 @@
     persist: true
     paint:
         fill-color: 'rgba(196, 226, 208, 1)'
-        fill-opacity: 0.8
+        fill-opacity: 1
   - id: '1985visibility'
     url: './data/1985visibility.geojson'
     type: 'fill'
@@ -140,7 +140,7 @@
     persist: true
     paint:
         fill-color: 'rgba(196, 226, 208, 1)'
-        fill-opacity: 0.8
+        fill-opacity: 1
   - id: '2024visibility'
     url: './data/2024visibility.geojson'
     type: 'fill'
