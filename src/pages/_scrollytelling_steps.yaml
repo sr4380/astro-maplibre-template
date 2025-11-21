@@ -4,7 +4,7 @@
   zoom: 10
   pitch: 0
   bearing: 0
-  description: Explore a century of student activism, protests, and the fight for free expression at Columbia University. Scroll down to see key moments mapped onto the campus from 1917 World War I, when speaking against the war was labeled treason and students were arrested for distributing antiwar leaflets while faculty were dismissed for political dissent; to the 1936 anti-Nazi protests, the 1968 anti-Vietnam War and Gym Crow uprising, the 1985 anti-apartheid movement, and today's Gaza solidarity movement.
+  description: Explore a century of student activism, protests, and the fight for free expression at Columbia University. Scroll down to see key moments mapped onto the campus from 1917 World War I dissent, to the 1936 anti-Nazi protests, the 1968 anti-Vietnam War and Gym Crow uprising, the 1985 anti-apartheid movement, and today's Gaza solidarity movement.
   media: ./img/intro1.jpg
   
 - title: 1917 World War I- Columbia Calls
@@ -12,7 +12,7 @@
   zoom: 15
   pitch: 0
   bearing: 20
-  description: In 1917, during World War I, speaking against the war was considered treason. Columbia students were arrested for distributing antiwar leaflets, and faculty members faced dismissal for expressing political dissent.
+  description: In 1917, during World War I, speaking against the war was considered an act of treason. At Columbia, students who criticized the university's involvement in the war risked expulsion. Some were expelled for distributing anti-war leaflets, and faculty members were dismissed for expressing political dissent.
   media: ./img/1917-updated.jpg
 
 - title: 1936 Anti-Nazi Protests
@@ -20,7 +20,7 @@
   zoom: 15
   pitch: 0
   bearing: 20
-  description: In 1936, Columbia students protested President Nicholas Murray Butler's ties to Nazi Germany, as the German government was dismissing Jewish professors from universities, forcing many renowned scientists, including Albert Einstein, to flee.
+  description: In 1936, Columbia students protested President Nicholas Murray Butler's ties to Nazi Germany, as the German government was dismissing Jewish professors from universities, forcing many renowned scientists, including Albert Einstein, to flee. Students were expelled for expressing their dissent.
   media: ./img/1936b.jpg
   layers:
     - id: '1936nyc'
@@ -39,7 +39,7 @@
   zoom: 15
   pitch: 0
   bearing: 20
-  description: The 1968 protests confronted the University's involvement in Military research and segregationst gym construction plans.
+  description: The 1968 protests confronted the University's involvement in military research and its segregated gym construction plans. Students protested and occupied five campus buildings. Around 20 students were fully dismissed, and 42 were censured. Out of 150,000 class and laboratory sessions, 35 were disrupted and half of them had to be canceled.
   media: ./img/1968.jpg
   
   layers:
@@ -78,7 +78,7 @@
   zoom: 15
   pitch: 0
   bearing: 20
-  description: Columbia Students demanded divestment from Companies supporting appertheid South Africa.
+  description: Columbia students demanded divestment from companies supporting apartheid South Africa, at a time when nearly 20 trustees were involved with businesses operating there. Columbia later became the first Ivy League institution to divest, following strong student dissent, including building occupations and fasting.
   media: ./img/1985.jpg
   layers:
   - id: '1985building'
@@ -116,7 +116,7 @@
   zoom: 15
   pitch: 0
   bearing: 20
-  description: Recent Encampments and disciplinary actions highlight the ongoing struggle for Free Speech and Academic Freedom on Campus.
+  description: Recent encampments and disciplinary actions highlight the ongoing struggle for free speech and academic freedom on campus. Amid the ongoing destruction in Gaza, Columbia students staged encampments calling for divestment from companies connected to the situation. When new disciplinary policies addressed antisemitism, students—while expressing political dissent—adopted multiple forms of expression, including physical encampments, symbolic use of space, keffiyehs, masks, and flags.
   media: ./img/2024.jpg
   layers:
   - id: '2024building'
