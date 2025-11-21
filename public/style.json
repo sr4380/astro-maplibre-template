@@ -91,7 +91,7 @@
       "source-layer": "boundary",
       "paint": {
         "line-color": "#333333",
-        "line-width": 1
+        "line-width": 0.5
       }
     },
     {
@@ -101,7 +101,7 @@
       "source-layer": "building",
       "paint": {
         "line-color": "#555555",
-        "line-width": 1.2
+        "line-width": 1
       }  
     }
   ]
